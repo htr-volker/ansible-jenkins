@@ -1,7 +1,7 @@
 ---
 - name: initialize docker swarm
   become: true
-  hosts: master
+  hosts: managers
   roles:
     - docker
     - docker-swarm-init
