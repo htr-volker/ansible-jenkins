@@ -1,7 +1,8 @@
 pipeline{
     agent any
     environment{
-        YOUR_NAME="harry"
+        DATABASE_URI = credentials("DATABASE_URI")
+        SECRET_KEY = credentials("SECRET_KEY")
     }
     stages{
         stage("Configure Swarm"){
